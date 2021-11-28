@@ -17,7 +17,7 @@ class SingInPage extends StatelessWidget {
             Expanded(
               child: SingleChildScrollView(
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SizedBox(height: size.height*0.25),
                     const Center(
@@ -34,82 +34,88 @@ class SingInPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height: size.height*0.20),
+                    SizedBox(height: size.height*0.01),
                     Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: TextField(
-                        style: const TextStyle(color: Colors.white),
-                        autocorrect: false,
-                        decoration: InputDecoration(
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(15),
-                            borderSide: const BorderSide(
-                                  color: Color.fromRGBO(27, 175, 138, 1),
-                              width: 1.0,
+                      padding: const EdgeInsets.only(top: 20.0,left: 20,right:20,bottom: 10),
+                      child: SizedBox(
+                        width: size.width*0.30,
+                        child: TextField(
+                          style: const TextStyle(color: Colors.white),
+                          autocorrect: false,
+                          decoration: InputDecoration(
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(15),
+                              borderSide: const BorderSide(
+                                    color: Color.fromRGBO(27, 175, 138, 1),
+                                width: 1.0,
+                              ),
                             ),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(15),
-                            borderSide: const BorderSide(
-                              color: Color.fromRGBO(27, 175, 138, 1),
-                              width: 2.0,
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(15),
+                              borderSide: const BorderSide(
+                                color: Color.fromRGBO(27, 175, 138, 1),
+                                width: 2.0,
+                              ),
                             ),
-                          ),
-                          prefixIcon: const Icon(
-                            CupertinoIcons.mail_solid,
-                            color: Colors.white,
-                          ),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10)
-                          ),
-                          hintText: 'Ingresar tu correo electronico',
-                          hintStyle: const TextStyle(color: Colors.white),
-                          helperStyle: const TextStyle(
-                            color: Colors.white
-                          ),
-                          label: const Text(
-                            'Correo Electronico',
-                            style: TextStyle(
+                            prefixIcon: const Icon(
+                              CupertinoIcons.mail_solid,
                               color: Colors.white,
-                              fontFamily: 'Lemonada'
+                            ),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10)
+                            ),
+                            hintText: 'Ingresar tu correo electronico',
+                            hintStyle: const TextStyle(color: Colors.white),
+                            helperStyle: const TextStyle(
+                              color: Colors.white
+                            ),
+                            label: const Text(
+                              'Correo Electronico',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'Lemonada'
+                              ),
                             ),
                           ),
                         ),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: TextField(
-                        style: const TextStyle(color: Colors.white),
-                        autocorrect: false,
-                        obscureText: true,
-                        decoration: InputDecoration(
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(15),
-                            borderSide: const BorderSide(
-                                  color: Color.fromRGBO(27, 175, 138, 1),
-                              width: 1.0,
+                      padding: const EdgeInsets.only(top: 10.0,left: 20,right:20,bottom: 20),
+                      child: SizedBox(
+                        width: size.width*0.30,
+                        child: TextField(
+                          style: const TextStyle(color: Colors.white),
+                          autocorrect: false,
+                          obscureText: true,
+                          decoration: InputDecoration(
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(15),
+                              borderSide: const BorderSide(
+                                    color: Color.fromRGBO(27, 175, 138, 1),
+                                width: 1.0,
+                              ),
                             ),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(15),
-                            borderSide: const BorderSide(
-                              color: Color.fromRGBO(27, 175, 138, 1),
-                              width: 2.0,
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(15),
+                              borderSide: const BorderSide(
+                                color: Color.fromRGBO(27, 175, 138, 1),
+                                width: 2.0,
+                              ),
                             ),
-                          ),
-                          prefixIcon: const Icon(
-                            CupertinoIcons.lock_shield_fill,
-                            color: Colors.white,
-                          ),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10)
-                          ),
-                          label: const Text(
-                            'Contraseña',
-                            style: TextStyle(
+                            prefixIcon: const Icon(
+                              CupertinoIcons.lock_shield_fill,
                               color: Colors.white,
-                              fontFamily: 'Lemonada'
+                            ),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10)
+                            ),
+                            label: const Text(
+                              'Contraseña',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'Lemonada'
+                              ),
                             ),
                           ),
                         ),
@@ -120,7 +126,7 @@ class SingInPage extends StatelessWidget {
                       child: GestureDetector(
                         onTap: () => Navigator.pushNamed(context, 'LoginPage'),
                         child: Container(
-                          width: double.infinity,
+                          width: size.width*0.15,
                           height: size.height*0.05,
                           decoration: const BoxDecoration(
                             color: Color.fromRGBO(27, 175, 138, 1),

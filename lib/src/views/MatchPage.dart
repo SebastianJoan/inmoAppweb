@@ -28,12 +28,12 @@ class _MatchPageState extends State<MatchPage> {
 }
 
 Widget _configView(BuildContext context, Size size) {
-  return Scaffold(
-    backgroundColor: const Color.fromRGBO(35, 40, 50, 1.0),
-    body: Container(
-      width: double.infinity,
-      height: size.height*0.15,
-    ),
+  return const Scaffold(
+    backgroundColor: Color.fromRGBO(35, 40, 50, 1.0),
+    // body: SizedBox(
+    //   width: double.infinity,
+    //   height: size.height*0.15,
+    // ),
   );
 }
 
@@ -51,7 +51,7 @@ Widget _matchView(BuildContext context, Size size) {
               color: Colors.transparent,
             ),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Column(
                   children: [
@@ -122,8 +122,8 @@ Widget _matchView(BuildContext context, Size size) {
                   onDoubleTap: () =>
                       Navigator.pushNamed(context, 'InfoMatchPage'),
                   child: Container(
-                    width: size.width * 0.90,
-                    height: size.height * 0.40,
+                    width: size.width * 0.40,
+                    height: size.height * 0.50,
                     decoration: const BoxDecoration(
                         color: Colors.transparent,
                         borderRadius: BorderRadius.only(
@@ -141,8 +141,8 @@ Widget _matchView(BuildContext context, Size size) {
                   ),
                 ),
                 Container(
-                  width: size.width * 0.91,
-                  height: size.height * 0.09,
+                  width: size.width * 0.40,
+                  height: size.height * 0.10,
                   decoration: const BoxDecoration(
                       color: Color.fromRGBO(57, 63, 70, 1),
                       borderRadius: BorderRadius.only(
